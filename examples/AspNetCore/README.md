@@ -29,7 +29,8 @@ the example for the first time.
 
 ## Export metrics to Prometheus
 
-Switch to Prometheus by setting `UseMetricsExporter` to `"prometheus"` in `appsettings.json`.
+The example by default uses console exporter. You can switch to Prometheus exporter
+by setting `UseMetricsExporter` to `"prometheus"` in `appsettings.json`.
 
 Start the example project and keep it running.
 Now you should be able to see the metrics at `https://localhost:<port>/metrics`.
