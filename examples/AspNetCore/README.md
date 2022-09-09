@@ -15,9 +15,6 @@ You can try out different samplers like `TraceIdRatioBasedSampler`.
 
 ## How to run the example
 
-The example creates a `WeatherForecast` API based on the project in this
-[tutorial](https://docs.microsoft.com/aspnet/core/tutorials/first-web-api).
-
 Start the example project by following the [test the project step](https://docs.microsoft.com/aspnet/core/tutorials/first-web-api#test-the-project)
 in the tutorial.
 
