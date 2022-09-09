@@ -22,10 +22,7 @@ Start the example project by following the [test the project step](https://docs.
 in the tutorial.
 
 To generate telemetry including HTTP
-metrics, make a request at `https://localhost:<port>/WeatherForecast`.
-
-Note: `<port>` is a randomly chosen port number. It is generated when running
-the example for the first time.
+metrics, make a request at `https://localhost:5000/WeatherForecast`.
 
 ## Export metrics to Prometheus
 
@@ -33,7 +30,7 @@ The example by default uses console exporter. You can switch to Prometheus expor
 by setting `UseMetricsExporter` to `"prometheus"` in `appsettings.json`.
 
 Start the example project and keep it running.
-Now you should be able to see the metrics at `https://localhost:<port>/metrics`.
+Now you should be able to see the metrics at `https://localhost:5000/metrics`.
 
 Collect metrics using Prometheus by following this [guide](../../docs/metrics/getting-started-prometheus-grafana/README.md#collect-metrics-using-prometheus).
 
@@ -48,7 +45,7 @@ scrape_configs:
   - job_name: "otel"
     scheme: https
     static_configs:
-      - targets: ["localhost:<port>"]
+      - targets: ["localhost:5000"]
 ```
 
 ## References
