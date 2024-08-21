@@ -24,9 +24,11 @@ WORKDIR /test
 COPY --from=build /drop .
 COPY --from=w3c /w3c .
 RUN apt-get update \
-  && apt-get install -y python3-pip python3-dev \
+  && apt-get install -y python3-pip python3-dev python3-venv \
   && cd /usr/local/bin \
   && ln -s /usr/bin/python3 python \
+  && python -m venv .venv \
+  && . .venv/bin/activate \
   && pip3 install --upgrade pip \
   && pip3 install aiohttp
 ENTRYPOINT ["dotnet", "vstest", "OpenTelemetry.Instrumentation.W3cTraceContext.Tests.dll", "--logger:console;verbosity=detailed"]

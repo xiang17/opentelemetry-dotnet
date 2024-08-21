@@ -71,7 +71,7 @@ public class W3CTraceContextTests : IDisposable
 
         app.RunAsync();
 
-        string result = RunCommand("python", "trace-context/test/test.py http://localhost:5000/");
+        string result = RunCommand(".venv/bin/python", "-m trace-context/test/test.py http://localhost:5000/");
 
         // Assert
         string lastLine = ParseLastLine(result);
